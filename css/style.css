@@ -51,11 +51,20 @@ main{
 /* logo */
 
 .logo{
-  width: 60%;
+  width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.logo img:last-child{
+  width: 60%;
+}
+
+.logo img:first-child{
+  display: none;
+  height: 30px;
 }
 
 /* nav-menu */
@@ -135,7 +144,7 @@ main{
 .account img {
   height: 30px;
   vertical-align: middle;
-  padding: 3px;
+  padding: 5px;
   background-color: grey;
   border-radius: 50%;
 
@@ -148,7 +157,6 @@ main{
 
 .account a {
   text-decoration: none;
-  padding-left: 5px;
   font-size: 16px;
   color: white;
 
@@ -165,6 +173,46 @@ main{
 /* media query navleft */
 
 @media screen and (max-width: 768px){
+  .logo img:last-child{
+    display: none;
+  }
+  .logo img:first-child{
+    display: block;
+    height: 30px;
+  }
+
+   .nav-menu{
+     flex-grow: 1;
+     text-align: center;
+   }
+
+   .nav-menu ul li:first-child {
+
+     border-left: 0px solid green;
+   }
+
+   .nav-menu ul li {
+     padding-top: 5px;
+     padding-bottom: 5px;
+   }
+
+
+
+  span{
+    display: none;
+  }
+
+  hr{
+    display: none;
+  }
+
+  .nav-playlist{
+    display: none;
+  }
+
+  .profile > a {
+    padding-left: 6px;
+  }
 
 }
 
