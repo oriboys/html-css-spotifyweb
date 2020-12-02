@@ -1,0 +1,64 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background-color: yellow;
+}
+
+
+.clearfix::after{
+  display: table;
+  content:"";
+  clear: both;
+}
+
+/* inizio main */
+
+
+main{
+  width: 100%;
+  height: calc(100% - 100px);
+}
+
+.nav-left{
+  width: 250px;
+  height: 100%;
+  background-color: red;
+  float: left;
+  /* margin-bottom: 100px; */
+}
+
+
+.main-right{
+  width: calc(100% - 250px);
+  height: 100%;
+  background-color: blue;
+  float: left;
+}
+
+
+@media screen and (max-width: 768px){
+  .nav-left{
+    width: 50px;
+  }
+
+  .main-right{
+    width: calc(100% - 50px);
+  }
+}
+
+
+
+/* footer */
+
+footer{
+  width: 100%;
+  height: 100px;
+  background-color: grey;
+  position: fixed;
+}
