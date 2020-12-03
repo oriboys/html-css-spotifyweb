@@ -253,8 +253,9 @@ main{
 .main-right{
   width: calc(100% - 250px);
   height: 100%;
-  background-color: blue;
+  background-color: rgb(42, 39, 39);
   float: left;
+  overflow-y: auto;
 }
 
 .main-right h2 {
@@ -273,6 +274,7 @@ main{
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
 }
 
 .nav-main a{
@@ -347,22 +349,84 @@ main{
  /* scoltate recentemente */
 
  .ascoltate-recentemente {
-   padding-left: 10px;
-   padding-right: 10px;
+   margin-left: 30px;
+   margin-right: 10px;
    padding-top: 20px;
 
  }
 
-.album {
+ .ascoltate-recentemente .album h4 {
+   color: white;
+   text-align: center;
+   padding-top: 5px;
+   padding-bottom: 5px;
+
+
+ }
+
+ .ascoltate-recentemente p {
+   color: grey;
+   text-align: center;
+   padding-bottom: 5px;
+ }
+
+.albums {
   display: flex;
   flex-wrap: wrap;
+
+}
+
+.album{
+  margin-right: 20px;
+  margin-bottom: 15px;
+  width: 210px;
+
+
 }
 
 .ascoltate-recentemente img {
-  height: 200px;
-  padding-right: 15px;
-  padding-bottom: 15px;
+  height: 210px;
 }
+
+
+.player{
+  position: relative;
+}
+
+.album i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
+  display: none;
+}
+
+.layover:hover i {
+  display: block;
+}
+
+.layover{
+  width: 100%;
+  /* margin-left: 15px; */
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.layover:hover{
+  width: 100%;
+  /* margin-left: 15px; */
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 
 
 
