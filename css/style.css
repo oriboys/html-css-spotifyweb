@@ -34,6 +34,8 @@ main{
   /* padding-left: 10px;
   padding-right: 10px; */
   flex-direction: column;
+
+
 }
 
 .nav-left ul{
@@ -49,6 +51,10 @@ main{
 }
 
 .nav-left ul li a:hover {
+  color: white;
+}
+
+.nav-left .profile a span:hover{
   color: white;
 }
 
@@ -276,9 +282,11 @@ main{
   align-items: center;
   justify-content: flex-end;
 
+
 }
 
-.nav-main a{
+
+.main-right .nav-main a{
   /* align-content: center; */
   padding: 10px 25px;
   text-decoration: none;
@@ -286,7 +294,9 @@ main{
   border: 2px solid white;
   border-radius: 50px;
   margin-right: 30px;
-  z-index: 2;
+  z-index: 999;
+  position: absolute
+
 }
 
 
@@ -483,11 +493,15 @@ main{
 footer{
   width: 100%;
   height: 100px;
+  /* background-color: green; */
   background-color: rgb(45, 49, 51);
-  position: fixed;
+  /* position: fixed; */
   z-index: 1;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  position: absolute;
 }
 
 .riproduzione{
@@ -512,6 +526,16 @@ footer{
 .played{
   padding-left: 5px;
 }
+
+.played a {
+  color: grey;
+  text-decoration: none;
+}
+
+.played a:hover {
+  color: white;
+}
+
 
 .Artist{
   color: white;
@@ -706,4 +730,18 @@ footer{
     margin-right: 10px;
   }
 
+}
+
+
+@media screen and (max-width: 730px){
+  .riproduzione {
+    margin-top: 15px;
+  }
+  .player{
+    margin-top: 15px;
+  }
+  .options{
+    margin-top: 15px;
+    margin-left: 10px;
+  }
 }
