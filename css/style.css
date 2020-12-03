@@ -492,7 +492,7 @@ footer{
 
 .riproduzione{
   /* width: 250px; */
-  padding-left:  5px;
+  padding-left:  10px;
   display: flex;
   align-items: center;
 
@@ -501,7 +501,7 @@ footer{
 .brano {
   display: flex;
   align-items: center;
-  padding-right: 80px;
+  padding-right: 60px;
 }
 
 .brano img{
@@ -535,16 +535,24 @@ footer{
 
 /* player */
 
-.button {
-  padding-top:
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
 .button a {
   color: white;
   font-size: 18px;
   font-weight: bolder;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .button a:nth-child(3) i {
@@ -554,15 +562,102 @@ footer{
 }
 
 
+.minutes {
+  display: flex;
+  align-items: center;
+}
 
-.started::after{
-  content: '';
-  display: inline-block;
-  width: 505px;
-  height: 5px;
+.started{
+  padding-right: 20px;
+  color: grey;
+}
+
+.lunghezza{
+  height: 4px;
+  width: 400px;
+  background-color: grey;
+  border-radius: 5px;
+  position: relative;
+}
+
+.avanzamento{
+  height: 4px;
+  width: 160px;
   background-color: white;
   border-radius: 5px;
 }
+
+.lunghezza:hover .avanzamento {
+  background-color: green;
+}
+
+.pallino{
+  position: absolute;
+  top: -10px;
+  left: 150px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+  display: none;
+}
+
+.lunghezza:hover .pallino{
+  display: inline-block;
+}
+
+.end {
+  color: grey;
+  padding-left: 20px;
+}
+
+
+/* options */
+
+
+
+.options{
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.options-buttons a{
+  padding-right: 10px;
+  color: white;
+}
+
+.options .lunghezza{
+  height: 4px;
+  width: 130px;
+  background-color: grey;
+  border-radius: 5px;
+  position: relative;
+}
+
+.options .avanzamento{
+  height: 4px;
+  width: 50px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+
+.options .pallino{
+  position: absolute;
+  top: -3px;
+  left: 45px;
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: none;
+}
+
+
+
+
 
 
 
@@ -581,4 +676,34 @@ footer{
 
     padding-right: 30px;
   }
+
+  .lunghezza{
+    width: 200px;
+  }
+
+  .avanzamento{
+    width: 75px;
+  }
+
+  .pallino{
+    left: 65px;
+  }
+
+  .options .lunghezza{
+    width: 120px;
+  }
+
+  .options .avanzamento{
+    width: 40px;
+  }
+
+  .options .pallino{
+    left: 35px;
+  }
+
+  .minutes{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
 }
