@@ -257,6 +257,13 @@ main{
   float: left;
 }
 
+.main-right h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
 /* nav-main */
 
 .nav-main {
@@ -285,6 +292,77 @@ main{
   padding: 15px 30px;
 }
 
+/* music */
+
+.category {
+  width: 50%;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.category ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.category ul a {
+  color: grey;
+  text-decoration: none;
+}
+
+.category ul a:hover{
+  color: white;
+}
+
+.category ul li{
+  padding-bottom: 10px;
+}
+
+.category ul li:first-child {
+  position: relative;
+}
+
+.category ul li:first-child a {
+  color: white;
+}
+
+
+.category ul li:first-child a::after {
+  content: '';
+  display: inline-block;
+  height: 3px;
+  width: 40px;
+  background-color: green;
+  border-radius: 5px;
+  position: absolute;
+  top: calc(100% - 10px);
+  left: 50%;
+  transform: translateX(-50%);
+ }
+
+ /* scoltate recentemente */
+
+ .ascoltate-recentemente {
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 20px;
+
+ }
+
+.album {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ascoltate-recentemente img {
+  height: 200px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
 
 
 
