@@ -7,7 +7,7 @@
 .container{
   width: 100%;
   height: 100vh;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 
@@ -34,6 +34,9 @@ main{
   /* padding-left: 10px;
   padding-right: 10px; */
   flex-direction: column;
+  overflow: auto;
+
+
 
 
 }
@@ -260,6 +263,7 @@ main{
 .main-right{
   width: calc(100% - 250px);
   height: 100%;
+
   background-color: rgb(42, 39, 39);
   float: left;
   overflow-y: auto;
@@ -304,6 +308,22 @@ main{
 .nav-main a:hover {
   font-size: 20px;
   padding: 15px 30px;
+}
+
+
+/* media query */
+
+@media screen and (max-width: 444px){
+  .main-right .nav-main a{
+    margin-right: 200px;
+  }
+}
+
+@media screen and (max-width: 350px){
+  .nav-main{
+    display: none;
+  }
+
 }
 
 /* music */
@@ -360,6 +380,17 @@ main{
   top: calc(100% - 10px);
   left: 50%;
   transform: translateX(-50%);
+ }
+
+
+ /* media query  */
+
+
+ @media screen and (max-width: 350px){
+   .music{
+     margin-top: 0px;
+   }
+
  }
 
  /* scoltate recentemente */
@@ -507,7 +538,7 @@ footer{
   justify-content: space-between;
   flex-wrap: wrap;
   overflow-y: auto;
-  position: absolute;
+  position: fixed;
 }
 
 .riproduzione{
@@ -652,6 +683,12 @@ footer{
   padding-right: 10px;
 }
 
+.options-buttons{
+  display: flex;
+}
+
+
+
 .options-buttons a{
   padding-right: 10px;
   color: white;
@@ -749,5 +786,19 @@ footer{
   .options{
     margin-top: 15px;
     margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .options{
+    flex-direction: column;
+  }
+
+  .options-buttons{
+    flex-direction: column;
+  }
+
+  .options-buttons div {
+    margin-bottom: 5px;
   }
 }
